@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import { MovieItem, MovieLink, MoviesTitle, FilmList } from './MoviesList.styled';
 
@@ -23,15 +24,15 @@ const MoviesList = ({ movies, titlePage = null }) => {
   );
 };
 
-// MoviesList.propTypes = {
-//   movies: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       title: PropTypes.string,
-//       name: PropTypes.string,
-//     }).isRequired
-//   ),
-//   titlePage: PropTypes.string,
-// };
+MoviesList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string,
+      name: PropTypes.string,
+    }).isRequired
+  ),
+  titlePage: PropTypes.string,
+};
 
 export default MoviesList;
